@@ -1,20 +1,23 @@
 import React from 'react';
+import './component.scss';
 
 export const Component = ({ firstName, lastName, clubName, clubLogoUrl, playPhotoUrl, jumperNumber }) => {
 	return (
 		<div className="card">
-			<div className="top">
-				<div className="clubLogo">
+			<div className="top" >
+				<div className="clubLogoContainer">
 					<img
 						alt={clubName}
 						src={clubLogoUrl}
+						className="clubLogo"
 					/>
 				</div>
 
-				<div className="playerPhoto">
+				<div className="playerPhotoContainer">
 					<img
 						alt={firstName + ' ' + lastName}
 						src={playPhotoUrl}
+						className="playerPhoto"
 					/>
 				</div>
 

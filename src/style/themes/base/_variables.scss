@@ -1,0 +1,29 @@
+// Colour Palette
+$cerulean: #0093db;
+$crimson: #E51D13;
+
+// Greys
+$silver: #cccccc;
+
+$brand-primary: #ED1E30;
+$brand-secondary: $cerulean;
+$brand-error: $crimson;
+
+// Component defaults
+$text-colour-default:black;
+$border-colour-default: $silver;
+$border-radius-default: 3px;
+
+// Sizing
+$base-font-size: 14px;
+$label-font-size: 16px;
+$large-font-size: 20px;
+
+// Min-widths;
+$max-width-lg: 1000px;
+
+// Responsive
+$breakpoint-sm-only: '(max-width: 414px)' !default;
+$breakpoint-md-only: '(max-width: 768)' !default;
+$breakpoint-lg-only: '(max-width: 1280)' !default;
+

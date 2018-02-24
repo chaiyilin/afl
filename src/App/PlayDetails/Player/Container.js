@@ -7,7 +7,7 @@ const player = {
 	firstName: playerFromData.firstname,
 	lastName: playerFromData.lastname,
 	jumperNumber: playerFromData.jumperNumber,
-	clubName: playerFromData.club,
+	clubName: playerFromData.club.toUpperCase(),
 	clubLogoUrl: 'assets/Swans-rev.svg',
 	playPhotoUrl: 'assets/240399.png',
 }
