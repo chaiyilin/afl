@@ -3,7 +3,7 @@ import './component.scss';
 
 export const Component = ({ firstName, lastName, clubName, clubLogoUrl, playPhotoUrl, jumperNumber }) => {
 	return (
-		<div className="card">
+		<div className="playerCard">
 			<div className="top" >
 				<div className="clubLogoContainer">
 					<img

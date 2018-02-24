@@ -1,0 +1,22 @@
+.playerDetails{
+	padding-left: 1%;
+	padding-right: 1%;
+	height: 15em;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-between;
+}
+
+.large{
+	flex-direction: row;
+}
+
+.card{
+	width:25%;
+	height: 100%;
+	background-color: white;
+}
+
+.doubleWidth{
+	width:48%;
+}

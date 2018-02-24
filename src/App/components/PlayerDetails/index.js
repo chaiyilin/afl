@@ -1,1 +1,1 @@
-export { Container as PlayerDetails } from './Container';
+export { Component as PlayerDetails } from './Component';

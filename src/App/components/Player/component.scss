@@ -1,16 +1,16 @@
 @import '../../../style/themes/base/variables.scss';
 
-.card{
+.playerCard{
+	height: 100%;
 	.top{
-		padding-top: 1em;
-		padding-left: 1em;
-		padding-right: 1em;
+		height: 75%;
 		background-color: $brand-primary;
 		display: flex;
 		justify-content: 	space-between;
 
 		
 		.clubLogoContainer{
+			margin-top: 10px;
 			display: flex;
 			justify-content: center;
 
@@ -23,17 +23,23 @@
 		}
 
 		.playerPhotoContainer{
+			height:100%;
+			width: 50%;
 			flex: 1 0 auto;
 			justify-content: center;
 			display: flex;
 		}
 
 		.playerPhoto{
+			width: auto;
+			height: 100%;
 			vertical-align: bottom;
 			justify-content: center;
 		}
 	
 		.jumperNumber{
+			margin-top: 10px;
+			margin-right: 10px;
 			height: 1.5em;
 			width: 1.5em;
 			border-radius: 5px;
@@ -49,12 +55,16 @@
 	
 	
 	.bottom{
-		padding: 0.6em;
+		padding-left: 10px;
+		height: 25%;
 		background-color: white;
 
-		.lastName{
-			margin-left: 0.2em;
-			font-weight: bold;
+		.fullName{
+			padding-top: 10px;
+			.lastName{
+				margin-left: 0.2em;
+				font-weight: bold;
+			}
 		}
 
 		.clubName{

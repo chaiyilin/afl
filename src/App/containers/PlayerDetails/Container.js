@@ -1,5 +1,7 @@
 import React from 'react';
+import withSizes from 'react-sizes'
 import { PlayerDetails } from '../../components/PlayerDetails';
+import { SMALL, MEDIUM, LARGE } from '../../utils/deviceSizeTypes';
 const { players } = require('./players.json');
 
 const playerFromData = players.find(player => player.jumperNumber === 23);
@@ -24,6 +26,32 @@ const playerTotal =
 		// todo: don't know where are disposals. fake as 200
 		{ disposals: 200, kicks: 0, handballs: 0, marks: 0, tackles: 0, score: 0 });
 
+const playerBestOfSeason =
+	playerFromData.games.reduce((total, currentValue, currentIndex, arr) => {
+		if (currentValue.kicks > total.kicks) {
+			total.kicks = currentValue.kicks;
+		}
+
+		if (currentValue.handballs > total.handballs) {
+			total.handballs = currentValue.handballs;
+		}
+
+		if (currentValue.marks > total.marks) {
+			total.marks = currentValue.marks;
+		}
+
+		if (currentValue.tackles > total.tackles) {
+			total.tackles = currentValue.tackles;
+		}
+
+		if (currentValue.score > total.score) {
+			total.score = currentValue.score;
+		}
+		return total;
+	},
+		// todo: don't know where are disposals. fake as 200
+		{ disposals: 200, kicks: 0, handballs: 0, marks: 0, tackles: 0, score: 0 });
+
 const playerAverage = {
 	disposals: playerTotal.disposals / playerFromData.games.length,
 	handBalls: playerTotal.handBalls / playerFromData.games.length,
@@ -32,10 +60,30 @@ const playerAverage = {
 	score: playerTotal.score / playerFromData.games.length,
 }
 
-const playerDetails = { player, playerTotal, playerAverage }
-export const Container = () => {
+const playerDetails = { player, playerBestOfSeason, playerTotal, playerAverage }
+const Container = ({ deviceSizeType }) => {
 	return (
 		<PlayerDetails
-			{...playerDetails}></PlayerDetails>
+			{...playerDetails} deviceSizeType={deviceSizeType}></PlayerDetails>
 	)
 }
+
+
+const mapSizesToProps = ({ width }) => {
+	let deviceSizeType;
+	if (width <= 414) {
+		deviceSizeType = SMALL;
+	}
+
+	if (width > 414 && width <= 768) {
+		deviceSizeType = MEDIUM;
+	}
+
+	if (width > 768) {
+		deviceSizeType = LARGE;
+	}
+
+	return { deviceSizeType };
+}
+
+export const enhanced = withSizes(mapSizesToProps)(Container)

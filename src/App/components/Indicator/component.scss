@@ -1,0 +1,21 @@
+@import '../../../style/themes/base/variables.scss';
+
+.indicator{
+	height: 5em;
+	width: 50%;
+
+	.name{
+		font-size: 0.5em;
+		text-align: center;
+	}
+
+	.value{
+		font-size: 1em;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.red{
+		color: $brand-primary;
+	}
+}
