@@ -1,7 +1,7 @@
 import React from 'react';
-import { Player } from './PlayDetails/Player';
+import { PlayerDetails } from './containers/PlayerDetails';
 import './app.scss';
 
-export const App = () => <Player />
+export const App = () => <PlayerDetails />
 
 
