@@ -61,8 +61,8 @@ const playerAverage = {
 	score: Math.round(playerTotal.score / playerFromData.games.length * 100) / 100,
 }
 
-const playerDetails = { player, playerBestOfSeason, playerTotal, playerAverage }
-const Container = ({ deviceSizeType }) => {
+export const playerDetails = { player, playerBestOfSeason, playerTotal, playerAverage }
+export const Container = ({ deviceSizeType }) => {
 	return (
 		<PlayerDetails
 			{...playerDetails} deviceSizeType={deviceSizeType}></PlayerDetails>
@@ -70,7 +70,7 @@ const Container = ({ deviceSizeType }) => {
 }
 
 
-const mapSizesToProps = ({ width }) => {
+export const mapSizesToProps = ({ width }) => {
 	let deviceSizeType;
 	if (width <= 414) {
 		deviceSizeType = SMALL;
