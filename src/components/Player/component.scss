@@ -59,8 +59,11 @@
 		height: 25%;
 		background-color: white;
 
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
 		.fullName{
-			padding-top: 10px;
+			height: 30%;
 			.lastName{
 				margin-left: 0.2em;
 				font-weight: bold;
@@ -68,6 +71,7 @@
 		}
 
 		.clubName{
+			height: 30%;
 			font-size: 0.5em;
 		}
 	}
