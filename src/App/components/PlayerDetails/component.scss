@@ -1,22 +1,36 @@
 .playerDetails{
+	height: 15em;
+	width:100%;
+}
+
+.playerDetails_large{
+	top:0;
+	bottom:0;
+	margin-top:auto;
+	margin-bottom: auto;
+	position:absolute;
+
+	width: 98%;
 	padding-left: 1%;
 	padding-right: 1%;
-	height: 15em;
 	display: flex;
-	flex-direction: column;
 	justify-content:space-between;
 }
 
-.large{
-	flex-direction: row;
-}
-
 .card{
-	width:25%;
-	height: 100%;
+	width:100%;
+	margin-top: 0.5em;
 	background-color: white;
 }
 
-.doubleWidth{
+.card_primary{
+	margin-top:0;
 	width:48%;
+	height: 100%;
+}
+
+.card_secondary{
+	margin-top:0;
+	width:24%;
+	height: 100%;
 }

@@ -1,9 +1,8 @@
 @import '../../../style/themes/base/variables.scss';
 
 .indicator{
-	height: 5em;
-	width: 50%;
-
+	width:50%;
+	height: 25%;
 	.name{
 		font-size: 0.5em;
 		text-align: center;
@@ -15,7 +14,11 @@
 		text-align: center;
 	}
 
-	.red{
+	.value_red{
 		color: $brand-primary;
 	}
+}
+
+.indicator_medium{
+	width:auto;
 }

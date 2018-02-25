@@ -53,11 +53,12 @@ const playerBestOfSeason =
 		{ disposals: 200, kicks: 0, handballs: 0, marks: 0, tackles: 0, score: 0 });
 
 const playerAverage = {
-	disposals: playerTotal.disposals / playerFromData.games.length,
-	handBalls: playerTotal.handBalls / playerFromData.games.length,
-	marks: playerTotal.marks / playerFromData.games.length,
-	tackles: playerTotal.tackles / playerFromData.games.length,
-	score: playerTotal.score / playerFromData.games.length,
+	disposals: Math.round(playerTotal.disposals / playerFromData.games.length),
+	kicks: Math.round(playerTotal.kicks / playerFromData.games.length),
+	handballs: Math.round(playerTotal.handballs / playerFromData.games.length),
+	marks: Math.round(playerTotal.marks / playerFromData.games.length),
+	tackles: Math.round(playerTotal.tackles / playerFromData.games.length),
+	score: Math.round(playerTotal.score / playerFromData.games.length * 100) / 100,
 }
 
 const playerDetails = { player, playerBestOfSeason, playerTotal, playerAverage }

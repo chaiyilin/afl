@@ -1,11 +1,22 @@
+@import '../../../style/themes/base/variables.scss';
+.indicators_wrapper{
+	height: 100%;
+}
 .title{
+	height: 10%;
+	padding-top: 0.5em;
 	text-align: center;
+	font-weight: bold;
+}
+
+.title_red{
+	color: $brand-primary;
 }
 
 .indicators{
-	width: 10em;
+	height: 90%;
 	display: flex;
-	padding: 1em;
+	padding: 0.5em;
 	justify-content: 	space-between;
 	flex-wrap:wrap;
 }
