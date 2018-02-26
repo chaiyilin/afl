@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Container as OriginalPlayDetails, playerDetails, mapSizesToProps } from './Container';
-import { PlayerDetails } from '../../components/PlayerDetails'
+import { Component } from './Component'
 import { SMALL, MEDIUM, LARGE } from '../../utils/deviceSizeTypes';
 
 const setup = () => {
@@ -18,7 +18,7 @@ const setup = () => {
 describe('PlayerDetails container', () => {
 	it('should render component', () => {
 		const { wrapper } = setup();
-		expect(wrapper.find(PlayerDetails)).toHaveLength(1);
+		expect(wrapper.find(Component)).toHaveLength(1);
 	});
 
 	it('should pass props', () => {

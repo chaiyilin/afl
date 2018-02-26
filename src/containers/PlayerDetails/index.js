@@ -1,1 +1,0 @@
-export { enhanced as PlayerDetails } from './Container';

@@ -1,1 +1,1 @@
-export { Component as PlayerDetails } from './Component';
+export { enhanced as PlayerDetails } from './Container';
