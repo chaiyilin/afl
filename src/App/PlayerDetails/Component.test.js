@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Component } from './Component';
-import { Player } from '../Player';
-import { Indicators } from '../Indicators';
+import { Player } from '../../components/Player';
+import { Indicators } from '../../components/Indicators';
 import { SMALL, MEDIUM, LARGE } from '../../utils/deviceSizeTypes';
 
 const setup = (deviceSizeType) => {

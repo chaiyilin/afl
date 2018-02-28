@@ -1,8 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
-import './component.scss';
-import { Player } from '../Player';
-import { Indicators } from '../Indicators';
+import './Component.scss';
+import { Player } from '../../components/Player';
+import { Indicators } from '../../components/Indicators';
 import { SMALL, MEDIUM, LARGE } from '../../utils/deviceSizeTypes';
 
 export const Component = ({ player, playerAverage, playerTotal, playerBestOfSeason, deviceSizeType }) => {
