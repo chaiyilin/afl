@@ -1,7 +1,9 @@
 import React from 'react';
-import withSizes from 'react-sizes'
+import withSizes from 'react-sizes';
+import { compose, lifecycle, withHandlers, withState } from 'recompose';
 import { Component } from './Component';
 import { SMALL, MEDIUM, LARGE } from '../../utils/deviceSizeTypes';
+import { LANDSCAPE, PORTRAIT } from '../../utils/deviceOrientation';
 const { players } = require('./players.json');
 
 const playerFromData = players.find(player => player.jumperNumber === 23);
@@ -63,8 +65,31 @@ const playerAverage = {
 	score: Math.round(playerTotal.score / playerFromData.games.length * 100) / 100,
 }
 
-export const playerDetails = { player, playerBestOfSeason, playerTotal, playerAverage }
+export const playerDetails = { player, playerBestOfSeason, playerTotal, playerAverage };
+
+export const lifecycleHooks = {
+	componentDidMount() {
+		var self = this;          // Store `this` component outside the callback
+		if ('onorientationchange' in window) {
+			window.addEventListener("orientationchange", function () {
+				// `this` is now pointing to `window`, not the component. So use `self`.
+				self.setState({
+					orientation: !self.state.orientation
+				})
+				console.log("onorientationchange");
+			}, false);
+		}
+	}
+};
+
 export const Container = ({ deviceSizeType }) => {
+	let orientation;
+	if (window.innerHeight > window.innerWidth) {
+		orientation = LANDSCAPE;
+	} else {
+		orientation = PORTRAIT;
+	}
+
 	return (
 		<Component
 			{...playerDetails} deviceSizeType={deviceSizeType}></Component>
