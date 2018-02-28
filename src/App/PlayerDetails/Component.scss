@@ -1,33 +1,38 @@
+@import '../../style/themes/base/variables.scss';
+
 .playerDetails{
 	height: 15em;
-	
-}
-
-.playerDetails_large{
-	top:0;
-	bottom:0;
-	left:0;
-	right: 0;
-	margin:auto;
-	position:absolute;
-	width:98%;
-	display: flex;
-	justify-content:space-between;
+	@media #{$breakpoint-lg-only} {
+			top:0;
+			bottom:0;
+			left:0;
+			right: 0;
+			margin:auto;
+			position:absolute;
+			width:98%;
+			display: flex;
+			justify-content:space-between;
+	}
 }
 
 .card{
 	background-color: white;
 }
 
-.card_subsequetial{
-	margin-top: 0.5em;
+@media #{$breakpoint-lg-only} {
+	.card_primary{
+		margin-top:0;
+		width:48%;
+		height: 100%;
+	}
 }
 
-.card_primary{
-	margin-top:0;
-	width:48%;
-	height: 100%;
+@media #{$breakpoint-lg-only} {
+	.card_subsequetial{
+		margin-top: 0.5em;
+	}
 }
+
 
 .card_secondary{
 	margin-top:0;

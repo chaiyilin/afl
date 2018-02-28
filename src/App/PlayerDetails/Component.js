@@ -7,12 +7,12 @@ import { SMALL, MEDIUM, LARGE } from '../../utils/deviceSizeTypes';
 
 export const Component = ({ player, playerAverage, playerTotal, playerBestOfSeason, deviceSizeType }) => {
 	return (
-		<div className={classnames('playerDetails', { playerDetails_large: deviceSizeType === LARGE })}>
-			<div className={classnames('card', { card_primary: deviceSizeType === LARGE })}>
+		<div className="playerDetails">
+			<div className="card card_primary">
 				<Player {...player}></Player>
 			</div>
 
-			<div className={classnames('card', 'card_subsequetial', { card_secondary: deviceSizeType === LARGE })}>
+			<div className="card card_subsequetial">
 				<Indicators {...playerTotal} isShowingRed={false} title="TOTAL" deviceSizeType={deviceSizeType}></Indicators>
 			</div>
 
