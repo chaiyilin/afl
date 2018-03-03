@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import { Container as OriginalPlayDetails, playerDetails, mapSizesToProps } from './Container';
+import { Container, playerDetails, mapSizesToProps } from './Container';
 import { Component } from './Component'
 import { SMALL, MEDIUM, LARGE } from '../../utils/deviceSizeTypes';
 
 const setup = () => {
 	const deviceSizeType = 'SMALL';
-	const wrapper = shallow(<OriginalPlayDetails deviceSizeType={deviceSizeType}></OriginalPlayDetails>);
+	const wrapper = shallow(<Container deviceSizeType={deviceSizeType}></Container>);
 
 	return {
 		playerDetails,
